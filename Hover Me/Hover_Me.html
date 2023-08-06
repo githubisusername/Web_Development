@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<style>
+    .hover_me{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    h1{
+        font-size: 5rem;
+        position: relative;
+
+    }
+    h1::before{
+        content: "";
+        background: blue;
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+        z-index: -1;
+        transform-origin: left;
+    }
+
+    h1:hover::before{
+        transform: scaleX(1);
+        color: white;
+    }
+    h1:hover{
+        color: white;
+    }
+</style>
+<body>
+<div class="hover_me">
+    <h1>HOVER ME</h1>
+</div>
+
+</body>
+</html>
